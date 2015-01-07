@@ -29,5 +29,4 @@ script:
   - drush -v test-run --uri=http://localhost:8081 "Islandora Disk Image"
 after_failure:
   - cat /tmp/drush_webserver.log
-  - cd $HOME/drupal-*
-  - cat sites/default/files/simpletest/verbose/*
+  - $TRAVIS_BUILD_DIR/tests/scripts/cat.sh
