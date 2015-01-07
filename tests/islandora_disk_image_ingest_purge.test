@@ -67,12 +67,6 @@ class IslandoraDiskImageIngestTestCase extends IslandoraCollectionWebTestCase {
     $path = 'islandora/object/' . $collectionpid . '/manage/overview/ingest';
     $file = drupal_get_path('module', 'islandora_disk_image') . '/tests/fixtures/test.dd';
     $photo = drupal_get_path('module', 'islandora_disk_image') . '/tests/fixtures/test.jpg';
-    $handle = fopen($file, "r");
-    $contents = fread($handle, filesize($file));
-    fclose($handle);
-    $edit = array(
-      'files[disk_image_file]' => $file,
-    );
     $edit = array(
       'files[disk_image_file]' => $file,
       'upload_photo' => TRUE,
