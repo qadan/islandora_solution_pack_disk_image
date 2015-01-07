@@ -69,8 +69,6 @@ class IslandoraDiskImageIngestTestCase extends IslandoraCollectionWebTestCase {
     $photo = drupal_get_path('module', 'islandora_disk_image') . '/tests/fixtures/test.jpg';
     $edit = array(
       'files[disk_image_file]' => $file,
-      'upload_photo' => TRUE,
-      'files[photo_file]' => $photo,
     );
     $this->drupalPost($path, $edit, t('Ingest'));
     $this->assertText('has been ingested', 'islandora');
